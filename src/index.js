@@ -3,24 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // Square Class
-class Square extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: null,
-        };
-    }
-
-    render() {
-        return (
-            <button
-                className="square"
-                onClick={() => this.props.onClick()}
-            >
-                {this.props.value}
-            </button>
-        );
-    }
+// class Square extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             value: null,
+//         };
+//     }
+//
+//     render() {
+//         return (
+//             <button
+//                 className="square"
+//                 onClick={() => this.props.onClick()}
+//             >
+//                 {this.props.value}
+//             </button>
+//         );
+//     }
+// }
+function Square(props) {
+    return (
+        <button className="square" onClick={props.onClick}>
+            {props.value}
+        </button>
+    );
 }
 
 // Board Class
